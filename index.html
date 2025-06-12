@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemano - Realizadores Audiovisuales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+       <div class="logo">
+  <a href="#">
+    <img src="logo-cinemano.png" alt="Cinemano logo" class="logo-img">
+  </a>
+</div>
+
+
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#quienes">Quiénes somos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-video" id="inicio">
+       <div class="video-wrapper">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="cinemano-intro.mp4" type="video/mp4">
+  </video>
+
+  <div class="video-text">
+    <h1>Tu visión, hecha cine.</h1>
+    <p>Transformamos ideas en piezas visuales memorables que conectan, emocionan y perduran.</p>
+  </div>
+</div>
+
+
+    <section id="quienes" class="section light">
+  <h2>¿Quiénes somos?</h2>
+  <p>
+    En Cinemano creemos que cada proyecto audiovisual es una oportunidad para contar algo auténtico.
+    Somos una productora venezolana que crea piezas con fuerza narrativa, identidad visual y estilo cinematográfico.
+    Desde campañas publicitarias hasta documentales y coberturas de eventos, nos mueve una pasión:
+    <strong>hacer que cada historia deje huella.</strong>
+  </p>
+</section>
+
+
+    <section id="servicios" class="section dark">
+  <h2>Servicios</h2>
+
+  <div class="cards">
+
+    <div class="card" onclick="mostrarVideo('video-documental')">
+      <h3>Documentales</h3>
+      <p>Historias que dejan huella. Capturamos realidades con una mirada cinematográfica y emocional.</p>
+    </div>
+
+    <div class="card" onclick="mostrarVideo('video-comerciales')">
+      <h3>Comerciales</h3>
+      <p>Contenido para cine y TV que eleva tu marca con impacto visual y narrativo.</p>
+    </div>
+
+    <div class="card" onclick="mostrarVideo('video-eventos')">
+      <h3>Eventos</h3>
+      <p>Registramos momentos clave con calidad profesional, técnica y emocional.</p>
+    </div>
+
+    <div class="card" onclick="mostrarVideo('video-news')">
+      <h3>News Features</h3>
+      <p>Piezas periodísticas o institucionales con narrativa profunda y visual poderosa.</p>
+    </div>
+
+  </div>
+
+  <section id="video-documental" class="section dark" style="display: none;">
+  <div class="video-wrapper">
+    <h2 style="color: #FFD700;">Documental destacado</h2>
+    <video controls width="100%" class="video-redondo">
+      <source src="documental.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+  </div>
+</section>
+
+<section id="video-comerciales" class="section dark" style="display: none;">
+  <div class="video-phone-frame">
+     <video controls>
+    <source src="comercial.mp4" type="video/mp4">
+    Tu navegador no puede reproducir este video.
+  </video>
+</div>
+</section>
+
+<section id="video-eventos" class="section dark" style="display: none;">
+  <div class="video-phone-frame">
+     <video controls>
+    <source src="evento.mp4" type="video/mp4">
+    Tu navegador no puede reproducir este video.
+  </video>
+</div>
+</section>
+
+
+<section id="video-news" class="section dark" style="display: none;">
+  <div class="video-wrapper">
+    <h2 style="color: #FFD700;">News Feature</h2>
+    <video controls width="100%" class="video-redondo">
+      <source src="news.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+  </div>
+</section>
+
+
+</section>
+
+
+    <section id="proceso" class="section light process">
+        <h2>Nuestro proceso</h2>
+        <div class="steps">
+            <div class="step"><p>Guión</p></div>
+            <div class="arrow">→</div>
+            <div class="step"><p>Producción</p></div>
+            <div class="arrow">→</div>
+            <div class="step"><p>Postproducción</p></div>
+        </div>
+    </section>
+
+    <section id="portafolio" class="section dark">
+        <h2>Portafolio</h2>
+        <p>Conoce nuestros trabajos y proyectos en los que la imagen cobra vida.</p>
+        <a href="https://www.behance.net/Cinemano" target="_blank" class="btn behance">Ver en Behance</a>
+    </section>
+
+    <section id="contacto" class="section light">
+        <h2>Contacto</h2>
+        <div class="social-icons">
+  <a href="mailto:contacto@cinemano.com" target="_blank" aria-label="Email">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+  </a>
+  <a href="https://www.instagram.com/cinemano_/" target="_blank" aria-label="Instagram">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Instagram" />
+  </a>
+  <a href="https://www.tiktok.com/@cinemano_?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok">
+    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" />
+  </a>
+  <a href="https://www.youtube.com/@cinemano_" target="_blank" aria-label="YouTube">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
+  </a>
+</div>
+
+  <a href="https://wa.me/message/TCBKXBPGJQQAM1" class="btn whatsapp" target="_blank">
+    Escribir por WhatsApp
+  </a>
+</p>
+
+
+    <footer>
+        <p>&copy; 2025 Cinemano. Todos los derechos reservados.</p>
+    </footer>
+
+<div class="whatsapp-container">
+  <div class="whatsapp-box" id="whatsappBox">
+    <p>Hola 👋<br>¿En qué podemos ayudarte?</p>
+    <a href="https://wa.me/584145633771?text=Hola,%20estoy%20interesado%20en%20producir%20un%20video%20para%20mi%20marca.%20¿Podrías%20contarme%20cómo%20trabajan%20y%20qué%20necesitan%20para%20comenzar?" 
+       class="btn whatsapp-btn" target="_blank">Escribir por WhatsApp</a>
+  </div>
+  <button class="whatsapp-toggle" onclick="toggleWhatsapp()">
+    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
+  </button>
+</div>
+
+<script>
+  function toggleWhatsapp() {
+    var box = document.getElementById('whatsappBox');
+    box.style.display = box.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+<script>
+  function mostrarVideoDocumental() {
+    const seccion = document.getElementById("video-documental");
+    seccion.style.display = "block";
+    seccion.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+<script>
+  function mostrarVideo(id) {
+    const secciones = document.querySelectorAll('.section.dark[id^="video-"]');
+    secciones.forEach(seccion => {
+      seccion.style.display = 'none';
+    });
+
+    const target = document.getElementById(id);
+    if (target) {
+      target.style.display = 'block';
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+
+<script>
+  function pausarTodosLosVideos() {
+    const videos = document.querySelectorAll("video");
+    videos.forEach(video => {
+      video.pause();
+    });
+  }
+
+  function mostrarVideo(idSeccion) {
+    pausarTodosLosVideos();
+
+    // Oculta todos los bloques de video
+    document.querySelectorAll("section[id^='video-']").forEach(sec => {
+      sec.style.display = "none";
+    });
+
+    // Muestra el bloque específico
+    const seccion = document.getElementById(idSeccion);
+    seccion.style.display = "block";
+    seccion.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+</body>
+</html>
