@@ -426,3 +426,49 @@ footer {
   border-radius: 16px;
 }
 
+.video-youtube {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-text h1 {
+  font-size: 3em;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.video-text p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+}
