@@ -427,8 +427,7 @@ footer {
 }
 
 .hero-video {
-  position: relative;
-  background-color: #000;
+  background-color: transparent; /* ✅ Ahora sí se verá la imagen de fondo */
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
@@ -473,11 +472,162 @@ footer {
 }
 
 .video-text.centrado h1 {
-  font-size: 3em;
-  color: #FFD700;
+  color: #FFD700 !important; /* Amarillo Cinemano */
   margin-bottom: 20px;
 }
 
 .video-text.centrado p {
   font-size: 1.2em;
 }
+
+.section {
+  scroll-margin-top: 100px; /* ajusta si tu navbar es más grande o más chica */
+}
+
+.video-wrapper-vertical {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.video-frame-vertical {
+  position: relative;
+  padding-bottom: 177.78%; /* Formato 9:16 vertical */
+  height: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.video-frame-vertical iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+}
+
+.video-thumbnail {
+  position: relative;
+  cursor: pointer;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 3em;
+  border-radius: 50%;
+  padding: 20px 28px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.video-wrapper-vertical {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.video-frame-vertical {
+  position: relative;
+  padding-bottom: 177.78%; /* Formato 9:16 vertical */
+  height: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.video-frame-vertical iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+}
+
+.video-thumbnail {
+  position: relative;
+  cursor: pointer;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 3em;
+  border-radius: 50%;
+  padding: 20px 28px;
+  font-weight: bold;
+  user-select: none;
+}
+
+body::before {
+  content: "";
+  background: url('foto-cinemano.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.5; /* Ajusta este valor según el contraste que desees */
+  pointer-events: none;
+}
+
+/* Fondo translúcido para secciones */
+.section {
+  background-color: rgba(18, 18, 18, 0.6); /* negro con 75% opacidad */
+  backdrop-filter: blur(4px); /* efecto glassmorphism */
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 16px;
+  padding: 60px 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+/* Fondo translúcido para el navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.6); /* negro transparente */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body, p, h1, h2, h3, h4, h5, h6, span, a, li {
+  color: white !important;
+}
+

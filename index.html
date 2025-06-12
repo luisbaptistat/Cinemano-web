@@ -105,15 +105,21 @@
 </div>
 </section>
 
-<section id="video-eventos" class="section dark" style="display: none;">
-  <div class="video-phone-frame">
-     <video controls>
-    <source src="evento.mp4" type="video/mp4">
-    Tu navegador no puede reproducir este video.
-  </video>
+<section id="video-eventos" class="section dark">
+  <h2 style="color: #FFD700;">Evento destacado</h2>
+  <div class="video-wrapper-vertical">
+<div class="video-frame-vertical" id="eventoVideoContainer" onclick="togglePlayPause()">
+  <iframe
+    src="https://player.vimeo.com/video/1092911894?h=06bfc38f76&autoplay=1&loop=0&muted=0&title=0&byline=0&portrait=0&controls=0"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen
+    title="evento"
+    id="eventoIframe">
+  </iframe>
 </div>
+  </div>
 </section>
-
 
 <section id="video-news" class="section dark" style="display: none;">
   <div class="video-wrapper">
@@ -234,6 +240,37 @@
     const seccion = document.getElementById(idSeccion);
     seccion.style.display = "block";
     seccion.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+<script>
+  function cargarVideoEvento() {
+    document.querySelector('.video-thumbnail').style.display = 'none';
+    const contenedor = document.getElementById('eventoVideoContainer');
+    contenedor.style.display = 'block';
+
+    const iframe = document.getElementById('eventoIframe');
+    iframe.src = "https://player.vimeo.com/video/1092911894?h=06bfc38f76&autoplay=1&loop=0&muted=0&title=0&byline=0&portrait=0&controls=1";
+  }
+</script>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+  let player;
+
+  function togglePlayPause() {
+    if (!player) {
+      const iframe = document.getElementById('eventoIframe');
+      player = new Vimeo.Player(iframe);
+    }
+
+    player.getPaused().then(function(paused) {
+      if (paused) {
+        player.play();
+      } else {
+        player.pause();
+      }
+    });
   }
 </script>
 
