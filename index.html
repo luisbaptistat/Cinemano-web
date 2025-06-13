@@ -495,5 +495,31 @@
   });
 </script>
 
+<script>
+  const menuBtn = document.querySelector(".menu-icon");
+  const navLinks = document.getElementById("navLinks");
+
+  // Alternar menú al hacer clic
+  function toggleMenu() {
+    navLinks.classList.toggle("active");
+  }
+
+  // Cerrar el menú
+  function closeMenu() {
+    navLinks.classList.remove("active");
+  }
+
+  // Cerrar al hacer scroll
+  window.addEventListener("scroll", closeMenu);
+
+  // Cerrar al cambiar tamaño de pantalla
+  window.addEventListener("resize", closeMenu);
+
+  // Cerrar al hacer clic en enlace
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+</script>
+
 </body>
 </html>

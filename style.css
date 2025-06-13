@@ -868,19 +868,18 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li {
     display: block;
   }
 
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.95);
-    flex-direction: column;
-    width: 100%;
-    padding: 20px;
-    gap: 15px;
-    z-index: 1000;
-    transition: all 0.3s ease;
-  }
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+  z-index: 999;
+}
 
   .nav-links a {
     font-size: 1.2em;
@@ -892,5 +891,20 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li {
 
   .navbar {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links a {
+    font-size: 1.1em;
+    padding: 12px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-links {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
