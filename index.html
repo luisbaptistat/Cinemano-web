@@ -449,11 +449,31 @@
 
 <script>
   // Abrir/cerrar menú móvil
+<script>
   function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
   }
 
-  // Ocultar navbar al hacer scroll hacia abajo y mostrar al subir
+  function closeMenu() {
+    const navLinks = document.getElementById("navLinks");
+    if (navLinks.classList.contains("active")) {
+      navLinks.classList.remove("active");
+    }
+  }
+
+  // Cerrar al hacer scroll (en móvil)
+  window.addEventListener("scroll", closeMenu);
+
+  // Cerrar al cambiar tamaño de ventana
+  window.addEventListener("resize", closeMenu);
+
+  // Cerrar al hacer clic en un enlace del menú
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Mostrar/ocultar navbar con scroll
   let lastScrollTop = 0;
   const navbar = document.getElementById("navbar");
 
@@ -467,7 +487,7 @@
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 
-  // Mostrar navbar al mover mouse arriba (en PC)
+  // Mostrar navbar cuando el mouse sube al borde superior
   document.addEventListener("mousemove", function (e) {
     if (e.clientY < 50) {
       navbar.style.top = "0";
