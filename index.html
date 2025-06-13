@@ -10,15 +10,13 @@
 </head>
 <body>
 
-<nav class="navbar" id="navbar">
-  <div class="logo">
-    <a href="#">
-      <img src="logo-cinemano.png" alt="Cinemano logo" class="logo-img">
-    </a>
+<nav class="navbar">
+  <div class="logo">logo-cinemano.png</div>
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
   </div>
-
-  <button class="hamburger" onclick="toggleMenu()">☰</button>
-
   <ul class="nav-links" id="navLinks">
     <li><a href="#inicio">Inicio</a></li>
     <li><a href="#quienes">Quiénes somos</a></li>
@@ -28,6 +26,7 @@
     <li><a href="#contacto">Contacto</a></li>
   </ul>
 </nav>
+
 
 <header id="inicio" class="hero-video">
   <div class="video-wrapper ajustado">
@@ -516,6 +515,25 @@
   window.addEventListener("resize", closeMenu);
 
   // Cerrar al hacer clic en enlace
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+</script>
+
+<script>
+  const navLinks = document.getElementById("navLinks");
+
+  function toggleMenu() {
+    navLinks.classList.toggle("active");
+  }
+
+  function closeMenu() {
+    navLinks.classList.remove("active");
+  }
+
+  window.addEventListener("scroll", closeMenu);
+  window.addEventListener("resize", closeMenu);
+
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", closeMenu);
   });

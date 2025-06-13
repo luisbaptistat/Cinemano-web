@@ -868,31 +868,34 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li {
     display: block;
   }
 
+/* Estilo base oculto con transición */
 .nav-links {
-  display: none;
+  display: flex;
   flex-direction: column;
   background-color: black;
   position: absolute;
-  top: 100%;
+  top: -100%;
   left: 0;
   width: 100%;
-  text-align: left;
   padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: top 0.4s ease, opacity 0.4s ease;
   z-index: 999;
 }
 
-  .nav-links a {
-    font-size: 1.2em;
-  }
+/* Estilo cuando el menú está activo (visible) */
+.nav-links.active {
+  top: 100%;
+  opacity: 1;
+  pointer-events: auto;
+}
 
-  .nav-links.active {
-    display: flex;
   }
 
   .navbar {
     flex-wrap: wrap;
   }
-}
 
 @media (max-width: 768px) {
   .nav-links a {
