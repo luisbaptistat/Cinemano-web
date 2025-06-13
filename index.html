@@ -452,37 +452,41 @@
 
   let lastScrollTop = 0;
 
+  // Abrir/cerrar menú
   function toggleMenu() {
     navLinks.classList.toggle("active");
   }
 
+  // Cerrar menú
   function closeMenu() {
     navLinks.classList.remove("active");
   }
 
-  // Ocultar menú al hacer scroll
+  // Ocultar menú al hacer scroll hacia abajo
   window.addEventListener("scroll", () => {
-    closeMenu();
+    closeMenu(); // cierra si está abierto
 
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     if (currentScroll > lastScrollTop) {
-      navbar.style.top = "-80px"; // Ocultar
+      navbar.style.top = "-80px"; // Oculta
     } else {
-      navbar.style.top = "0"; // Mostrar
+      navbar.style.top = "0"; // Muestra
     }
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 
-  // Mostrar navbar cuando el mouse toca la parte superior
+  // Mostrar navbar cuando el mouse toca el borde superior (desktop)
   document.addEventListener("mousemove", (e) => {
     if (e.clientY < 50) {
       navbar.style.top = "0";
     }
   });
 
-  // Cierra menú al hacer resize o click en un enlace
-  window.addEventListener("resize", closeMenu);
+  // Cerrar menú al hacer clic en enlace
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", closeMenu);
   });
+
+  // Cerrar al cambiar tamaño de pantalla
+  window.addEventListener("resize", closeMenu);
 </script>
