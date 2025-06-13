@@ -15,7 +15,7 @@
     <img src="logo-cinemano.png" alt="Cinemano logo" class="logo-img" />
   </div>
 
-  <button class="hamburger" onclick="toggleMenu()">☰</button>
+ <button class="hamburger">☰</button>
 
   <ul class="nav-links" id="navLinks">
     <li><a href="#inicio">Inicio</a></li>
@@ -446,50 +446,29 @@
 </script>
 
 <script>
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.getElementById("navLinks");
-  const navbar = document.getElementById("navbar");
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.getElementById("navLinks");
 
-  let lastScrollTop = 0;
-
-  // Abrir/cerrar menú
-  function toggleMenu() {
-  const navLinks = document.getElementById("navLinks");
-  navLinks.classList.toggle("active");
-}
-
-  // Cerrar menú
-  function closeMenu() {
-    navLinks.classList.remove("active");
-  }
-
-  // Ocultar menú al hacer scroll hacia abajo
-  window.addEventListener("scroll", () => {
-    closeMenu(); // cierra si está abierto
-
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll > lastScrollTop) {
-      navbar.style.top = "-80px"; // Oculta
-    } else {
-      navbar.style.top = "0"; // Muestra
+    function toggleMenu() {
+      navLinks.classList.toggle("active");
     }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-  });
 
-  // Mostrar navbar cuando el mouse toca el borde superior (desktop)
-  document.addEventListener("mousemove", (e) => {
-    if (e.clientY < 50) {
-      navbar.style.top = "0";
-    }
-  });
+    hamburger.addEventListener("click", toggleMenu);
 
-  // Cerrar menú al hacer clic en enlace
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.getElementById("navLinks").classList.remove("active");
-  });
-});
+    // Cierra el menú al hacer clic en un enlace
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
 
-  // Cerrar al cambiar tamaño de pantalla
-  window.addEventListener("resize", closeMenu);
+    // También cerrar si haces scroll o resize
+    window.addEventListener("scroll", () => {
+      navLinks.classList.remove("active");
+    });
+    window.addEventListener("resize", () => {
+      navLinks.classList.remove("active");
+    });
+  });
 </script>
