@@ -452,37 +452,49 @@
 
   let lastScrollTop = 0;
 
+  // Alternar menú
   function toggleMenu() {
     navLinks.classList.toggle("active");
   }
 
+  // Cerrar menú
   function closeMenu() {
     navLinks.classList.remove("active");
   }
 
-  // Ocultar menú al hacer scroll
+  // Cerrar al hacer scroll (en cualquier dispositivo)
   window.addEventListener("scroll", () => {
     closeMenu();
-
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     if (currentScroll > lastScrollTop) {
-      navbar.style.top = "-80px"; // Ocultar
+      navbar.style.top = "-80px";
     } else {
-      navbar.style.top = "0"; // Mostrar
+      navbar.style.top = "0";
     }
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 
-  // Mostrar navbar cuando el mouse toca la parte superior
+  // Mostrar navbar si el mouse sube al tope
   document.addEventListener("mousemove", (e) => {
     if (e.clientY < 50) {
       navbar.style.top = "0";
     }
   });
 
-  // Cierra menú al hacer resize o click en un enlace
-  window.addEventListener("resize", closeMenu);
+  // Cerrar menú al hacer clic en un enlace
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", closeMenu);
   });
+
+  // Cerrar menú al cambiar tamaño
+  window.addEventListener("resize", closeMenu);
+
+  // 🔥 Cerrar menú al hacer clic fuera
+  document.addEventListener("click", (event) => {
+    const isClickInsideMenu = navLinks.contains(event.target) || hamburger.contains(event.target);
+    if (!isClickInsideMenu) {
+      closeMenu();
+    }
+  });
 </script>
+
