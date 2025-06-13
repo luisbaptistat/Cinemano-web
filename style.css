@@ -452,7 +452,7 @@ footer {
 
 .video-frame.redondo iframe {
   position: absolute;
-  top: +15%;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -934,6 +934,7 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li {
 /* Ajuste de posición del iframe principal en móvil */
 @media (max-width: 768px) {
   .video-frame.redondo iframe {
-    top: +15%;   /* prueba entre -10% y -25% hasta que baje justo lo que quieres */
+    top: 0
+    ;   /* prueba entre -10% y -25% hasta que baje justo lo que quieres */
   }
 }
