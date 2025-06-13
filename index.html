@@ -10,13 +10,13 @@
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="logo">logo-cinemano.png</div>
-  <div class="menu-icon" onclick="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
+<nav class="navbar" id="navbar">
+  <div class="logo">
+    <img src="logo-cinemano.png" alt="Cinemano logo" class="logo-img" />
   </div>
+
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+
   <ul class="nav-links" id="navLinks">
     <li><a href="#inicio">Inicio</a></li>
     <li><a href="#quienes">Quiénes somos</a></li>
@@ -26,7 +26,6 @@
     <li><a href="#contacto">Contacto</a></li>
   </ul>
 </nav>
-
 
 <header id="inicio" class="hero-video">
   <div class="video-wrapper ajustado">
@@ -447,97 +446,43 @@
 </script>
 
 <script>
-  // Abrir/cerrar menú móvil
-<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.getElementById("navLinks");
+  const navbar = document.getElementById("navbar");
+
+  let lastScrollTop = 0;
+
   function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
     navLinks.classList.toggle("active");
   }
 
   function closeMenu() {
-    const navLinks = document.getElementById("navLinks");
-    if (navLinks.classList.contains("active")) {
-      navLinks.classList.remove("active");
-    }
+    navLinks.classList.remove("active");
   }
 
-  // Cerrar al hacer scroll (en móvil)
-  window.addEventListener("scroll", closeMenu);
+  // Ocultar menú al hacer scroll
+  window.addEventListener("scroll", () => {
+    closeMenu();
 
-  // Cerrar al cambiar tamaño de ventana
-  window.addEventListener("resize", closeMenu);
-
-  // Cerrar al hacer clic en un enlace del menú
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  // Mostrar/ocultar navbar con scroll
-  let lastScrollTop = 0;
-  const navbar = document.getElementById("navbar");
-
-  window.addEventListener("scroll", function () {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     if (currentScroll > lastScrollTop) {
-      navbar.style.top = "-100px"; // Ocultar
+      navbar.style.top = "-80px"; // Ocultar
     } else {
       navbar.style.top = "0"; // Mostrar
     }
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 
-  // Mostrar navbar cuando el mouse sube al borde superior
-  document.addEventListener("mousemove", function (e) {
+  // Mostrar navbar cuando el mouse toca la parte superior
+  document.addEventListener("mousemove", (e) => {
     if (e.clientY < 50) {
       navbar.style.top = "0";
     }
   });
-</script>
 
-<script>
-  const menuBtn = document.querySelector(".menu-icon");
-  const navLinks = document.getElementById("navLinks");
-
-  // Alternar menú al hacer clic
-  function toggleMenu() {
-    navLinks.classList.toggle("active");
-  }
-
-  // Cerrar el menú
-  function closeMenu() {
-    navLinks.classList.remove("active");
-  }
-
-  // Cerrar al hacer scroll
-  window.addEventListener("scroll", closeMenu);
-
-  // Cerrar al cambiar tamaño de pantalla
+  // Cierra menú al hacer resize o click en un enlace
   window.addEventListener("resize", closeMenu);
-
-  // Cerrar al hacer clic en enlace
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", closeMenu);
   });
 </script>
-
-<script>
-  const navLinks = document.getElementById("navLinks");
-
-  function toggleMenu() {
-    navLinks.classList.toggle("active");
-  }
-
-  function closeMenu() {
-    navLinks.classList.remove("active");
-  }
-
-  window.addEventListener("scroll", closeMenu);
-  window.addEventListener("resize", closeMenu);
-
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-</script>
-
-</body>
-</html>

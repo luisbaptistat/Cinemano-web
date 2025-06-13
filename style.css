@@ -852,62 +852,82 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li {
   font-size: 1.2em;
 }
 
+/* Estilos base navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+.logo {
+  color: #FFD700;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* HAMBURGUESA */
 .hamburger {
   display: none;
-  font-size: 1.8em;
+  font-size: 2em;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-  z-index: 1001;
 }
 
-/* Mobile navbar styles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
   .hamburger {
     display: block;
   }
 
-/* Estilo base oculto con transición */
-.nav-links {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  opacity: 0;
-  pointer-events: none;
-  transition: top 0.4s ease, opacity 0.4s ease;
-  z-index: 999;
-}
-
-/* Estilo cuando el menú está activo (visible) */
-.nav-links.active {
-  top: 100%;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-  }
-
-  .navbar {
-    flex-wrap: wrap;
-  }
-
-@media (max-width: 768px) {
-  .nav-links a {
-    font-size: 1.1em;
+  .nav-links li a {
     padding: 12px 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    text-align: center;
   }
+}
 
-  .nav-links {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+.section {
+  scroll-margin-top: 100px;
 }
