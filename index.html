@@ -10,23 +10,24 @@
 </head>
 <body>
 
-    <nav class="navbar">
-       <div class="logo">
-  <a href="#">
-    <img src="logo-cinemano.png" alt="Cinemano logo" class="logo-img">
-  </a>
-</div>
+<nav class="navbar" id="navbar">
+  <div class="logo">
+    <a href="#">
+      <img src="logo-cinemano.png" alt="Cinemano logo" class="logo-img">
+    </a>
+  </div>
 
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
 
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#quienes">Quiénes somos</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#proceso">Proceso</a></li>
-            <li><a href="#portafolio">Portafolio</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#quienes">Quiénes somos</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#portafolio">Portafolio</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
 
 <header id="inicio" class="hero-video">
   <div class="video-wrapper ajustado">
@@ -89,7 +90,7 @@
 <section id="video-documental" class="section dark">
   <h2 style="color: #FFD700;">Documental destacado</h2>
   <div class="video-thumbnail" onclick="cargarVideoYouTube()">
-    <img src="https://img.youtube.com/vi/GZGEv5D4odI/hqdefault.jpg" alt="Miniatura Documental">
+    <img src="thumbnail-documental.jpg" alt="Miniatura Documental">
     <div class="play-button">▶</div>
   </div>
   <div id="youtube-container" class="video-frame" style="display:none;"></div>
@@ -124,14 +125,13 @@
   </div>
 </section>
 
-<section id="video-news" class="section dark" style="display: none;">
-  <div class="video-wrapper">
-    <h2 style="color: #FFD700;">News Feature</h2>
-    <video controls width="100%" class="video-redondo">
-      <source src="news.mp4" type="video/mp4">
-      Tu navegador no soporta el video.
-    </video>
+<section id="video-news" class="section dark">
+  <h2 style="color: #FFD700;">Reportaje especial</h2>
+  <div class="video-thumbnail" onclick="cargarVideoNews()">
+    <img src="thumbnail-news.jpg" alt="Miniatura Reportaje Especial">
+    <div class="play-button">▶</div>
   </div>
+  <div id="youtube-news-container" class="video-frame" style="display:none;"></div>
 </section>
 
 </section>
@@ -185,11 +185,18 @@
 </section>
 
 
-    <section id="portafolio" class="section dark">
-        <h2>Portafolio</h2>
-        <p>Conoce nuestros trabajos y proyectos en los que la imagen cobra vida.</p>
-        <a href="https://www.behance.net/Cinemano" target="_blank" class="btn behance">Ver en Behance</a>
-    </section>
+<section id="portafolio" class="section dark">
+  <a href="https://www.behance.net/Cinemano" target="_blank" style="text-decoration: none;">
+    <img src="https://cdn-icons-png.flaticon.com/512/145/145799.png" alt="Behance" style="width: 40px; vertical-align: middle; margin-bottom: -8px;">
+    <span style="color: #FFD700; font-weight: bold; font-size: 1.8em; margin-left: 10px;">Portafolio</span>
+  </a>
+  <p style="margin-top: 10px;">Conoce nuestros proyectos audiovisuales realizados para marcas y organizaciones.</p>
+
+  <div class="behance-preview" onclick="window.open('https://www.behance.net/Cinemano', '_blank')">
+    <img src="behance-preview.jpg" alt="Portafolio en Behance">
+    <div class="overlay-button">Ver portafolio completo →</div>
+  </div>
+</section>
 
     <section id="contacto" class="section light">
         <h2>Contacto</h2>
@@ -384,6 +391,88 @@
     container.style.display = "block";
     thumbnail.style.display = "none";
   }
+</script>
+
+<script>
+  function cargarVideoYouTube() {
+    const container = document.getElementById("youtube-container");
+    const thumbnail = document.querySelector(".video-thumbnail");
+
+    container.innerHTML = `
+      <iframe 
+        src="https://www.youtube.com/embed/GZGEv5D4odI?autoplay=1&rel=0&modestbranding=1&controls=1&showinfo=0"
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+      </iframe>`;
+      
+    container.style.display = "block";
+    thumbnail.style.display = "none";
+  }
+</script>
+
+<script>
+  function cargarVideoNews() {
+    const container = document.getElementById("youtube-news-container");
+    const thumbnail = document.querySelector("#video-news .video-thumbnail");
+
+    container.innerHTML = `
+      <iframe 
+        src="https://www.youtube.com/embed/PRt3Tp7Blvc?autoplay=1&rel=0&modestbranding=1&controls=1&showinfo=0"
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+      </iframe>`;
+      
+    container.style.display = "block";
+    thumbnail.style.display = "none";
+  }
+</script>
+
+<script>
+  function cargarVideoNews() {
+    const container = document.getElementById("youtube-news-container");
+    const thumbnail = document.querySelector("#video-news .video-thumbnail");
+
+    container.innerHTML = `
+      <iframe 
+        src="https://www.youtube.com/embed/PRt3Tp7Blvc?autoplay=1&rel=0&modestbranding=1&controls=1&showinfo=0"
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+      </iframe>`;
+      
+    container.style.display = "block";
+    thumbnail.style.display = "none";
+  }
+</script>
+
+<script>
+  // Abrir/cerrar menú móvil
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+
+  // Ocultar navbar al hacer scroll hacia abajo y mostrar al subir
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", function () {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > lastScrollTop) {
+      navbar.style.top = "-100px"; // Ocultar
+    } else {
+      navbar.style.top = "0"; // Mostrar
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+
+  // Mostrar navbar al mover mouse arriba (en PC)
+  document.addEventListener("mousemove", function (e) {
+    if (e.clientY < 50) {
+      navbar.style.top = "0";
+    }
+  });
 </script>
 
 </body>
