@@ -263,9 +263,8 @@ footer {
   animation: fadeIn 0.3s ease;
 }
 
-
 .whatsapp-container {
-  position: fixed;
+  position: fixed;   /* ← para que siempre flote en la esquina */
   bottom: 20px;
   right: 20px;
   z-index: 1000;
