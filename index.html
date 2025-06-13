@@ -454,8 +454,9 @@
 
   // Abrir/cerrar menú
   function toggleMenu() {
-    navLinks.classList.toggle("active");
-  }
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("active");
+}
 
   // Cerrar menú
   function closeMenu() {
@@ -483,9 +484,11 @@
   });
 
   // Cerrar menú al hacer clic en enlace
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", closeMenu);
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navLinks").classList.remove("active");
   });
+});
 
   // Cerrar al cambiar tamaño de pantalla
   window.addEventListener("resize", closeMenu);
