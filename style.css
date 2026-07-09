@@ -223,6 +223,12 @@ button:focus-visible {
   background-color: #000;
 }
 
+/* En celular el logo y el botón de menú flotan fijos arriba de todo;
+   como ahí el video mide poco de alto, lo bajamos para que no se pisen */
+@media (max-width: 700px) {
+  .hero-video { margin-top: 88px; }
+}
+
 /* Truco clásico y muy compatible: el padding-bottom en % fija la proporción 16:9
    del contenedor, sea cual sea el ancho de la pantalla (PC o celular) */
 .video-wrapper.ajustado {
