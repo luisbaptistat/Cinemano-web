@@ -194,7 +194,7 @@ button:focus-visible {
   padding-bottom: 56.25%; /* 9 / 16 = proporción horizontal 16:9 */
 }
 
-.video-frame.redondo {
+.hero-frame {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -206,7 +206,7 @@ button:focus-visible {
 }
 
 /* Overlay oscuro para que el texto siempre se lea sobre el video */
-.video-frame.redondo::after {
+.hero-frame::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -216,7 +216,7 @@ button:focus-visible {
 }
 
 /* El iframe ocupa el 100% del recuadro 16:9 — se ve el video completo, sin recortar */
-.video-frame.redondo iframe {
+.hero-frame iframe {
   position: absolute;
   inset: 0;
   width: 100%;
