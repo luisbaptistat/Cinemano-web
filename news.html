@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportaje especial — Cinemano</title>
+  <meta name="description" content="Reportaje periodístico producido por Cinemano, con narrativa profunda y visual poderosa para marcas e instituciones.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar nav-hidden" id="navbar">
+  <div class="logo">
+    <a href="index.html"><img src="logo-cinemano.png" alt="Cinemano" class="logo-img" width="140" height="44"></a>
+  </div>
+
+  <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#inicio">Inicio</a></li>
+    <li><a href="index.html#portafolio">Portafolio</a></li>
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="index.html#proceso">Proceso</a></li>
+    <li><a href="index.html#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<header class="hero-video">
+  <div class="video-wrapper ajustado">
+    <div class="hero-frame">
+      <iframe
+        src="https://www.youtube.com/embed/PRt3Tp7Blvc?autoplay=1&mute=1&loop=1&playlist=PRt3Tp7Blvc&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        title="Reportaje especial — Cinemano">
+      </iframe>
+    </div>
+  </div>
+</header>
+
+<div class="film-strip" role="presentation"></div>
+
+<main>
+  <section class="section dark project-info">
+    <h1>Reportaje especial</h1>
+    <p>Piezas periodísticas o institucionales con narrativa profunda y visual poderosa, pensadas para conectar con audiencias reales.</p>
+    <a href="index.html#portafolio" class="back-link">← Volver al portafolio</a>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Cinemano. Todos los derechos reservados.</p>
+</footer>
+
+<div class="whatsapp-container">
+  <div class="whatsapp-box" id="whatsappBox">
+    <p>Hola 👋<br>¿En qué podemos ayudarte?</p>
+    <a href="https://wa.me/541150245473?text=Hola%2C%20estoy%20interesado%20en%20producir%20un%20video%20para%20mi%20marca.%20%C2%BFPodr%C3%ADas%20contarme%20c%C3%B3mo%20trabajan%20y%20qu%C3%A9%20necesitan%20para%20comenzar%3F"
+       class="btn whatsapp-btn" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  </div>
+  <button class="whatsapp-toggle" id="whatsappToggle" aria-label="Abrir chat de WhatsApp" aria-expanded="false">
+    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="" width="28" height="28">
+  </button>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

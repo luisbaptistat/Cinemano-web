@@ -22,10 +22,9 @@
 
   <ul class="nav-links" id="navLinks">
     <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#quienes">Quiénes somos</a></li>
+    <li><a href="#portafolio">Portafolio</a></li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#proceso">Proceso</a></li>
-    <li><a href="#portafolio">Portafolio</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
 </nav>
@@ -53,85 +52,49 @@
 
 <main>
 
-  <section id="quienes" class="section light">
-    <h2>¿Quiénes somos?</h2>
-    <p>
-      En Cinemano creemos que cada proyecto audiovisual es una oportunidad para contar algo auténtico.
-      Somos una productora venezolana que crea piezas con fuerza narrativa, identidad visual y estilo cinematográfico.
-      Desde campañas publicitarias hasta documentales y coberturas de eventos, nos mueve una pasión:
-      <strong>hacer que cada historia deje huella.</strong>
-    </p>
+  <section id="portafolio" class="portfolio-grid-section">
+    <div class="portfolio-grid">
+      <a href="documental.html" class="portfolio-tile" style="background-image:url('thumbnail-documental.jpg')">
+        <span class="portfolio-tile-label">Documental destacado</span>
+      </a>
+      <a href="comercial.html" class="portfolio-tile" style="background-image:url('thumbnail-comercial.jpg')">
+        <span class="portfolio-tile-label">Comercial destacado</span>
+      </a>
+      <a href="evento.html" class="portfolio-tile" style="background-image:url('thumbnail-evento.jpg')">
+        <span class="portfolio-tile-label">Evento destacado</span>
+      </a>
+      <a href="news.html" class="portfolio-tile" style="background-image:url('thumbnail-news.jpg')">
+        <span class="portfolio-tile-label">Reportaje especial</span>
+      </a>
+    </div>
+    <a href="https://www.behance.net/Cinemano" target="_blank" rel="noopener" class="behance-cta">
+      Ver portafolio completo en Behance →
+    </a>
   </section>
 
   <section id="servicios" class="section dark">
     <h2>Servicios</h2>
 
-    <div class="cards" role="tablist" aria-label="Servicios de Cinemano">
-      <button class="card" role="tab" aria-pressed="true" aria-controls="video-documental" data-target="video-documental">
+    <div class="cards">
+      <a href="documental.html" class="card">
         <h3>Documentales</h3>
         <p>Historias que dejan huella. Capturamos realidades con una mirada cinematográfica y emocional.</p>
-      </button>
+      </a>
 
-      <button class="card" role="tab" aria-pressed="false" aria-controls="video-comerciales" data-target="video-comerciales">
+      <a href="comercial.html" class="card">
         <h3>Comerciales</h3>
         <p>Contenido para cine y TV que eleva tu marca con impacto visual y narrativo.</p>
-      </button>
+      </a>
 
-      <button class="card" role="tab" aria-pressed="false" aria-controls="video-eventos" data-target="video-eventos">
+      <a href="evento.html" class="card">
         <h3>Eventos</h3>
         <p>Registramos momentos clave con calidad profesional, técnica y emocional.</p>
-      </button>
+      </a>
 
-      <button class="card" role="tab" aria-pressed="false" aria-controls="video-news" data-target="video-news">
+      <a href="news.html" class="card">
         <h3>News Features</h3>
         <p>Piezas periodísticas o institucionales con narrativa profunda y visual poderosa.</p>
-      </button>
-    </div>
-
-    <div id="video-documental" class="video-demo" data-video-panel>
-      <h3>Documental destacado</h3>
-      <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir documental destacado" onclick="cargarVideoYouTube('youtube-container', 'GZGEv5D4odI', this)">
-        <img src="thumbnail-documental.jpg" alt="Miniatura del documental destacado" loading="lazy">
-        <div class="play-button">▶</div>
-      </div>
-      <div id="youtube-container" class="video-frame" hidden></div>
-    </div>
-
-    <div id="video-comerciales" class="video-demo" data-video-panel hidden>
-      <h3>Comercial destacado</h3>
-      <div class="video-vertical-wrapper">
-        <iframe
-          src="https://player.vimeo.com/video/1092914731?h=07e73fd112&controls=1&title=0&byline=0&portrait=0&badge=0"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-          class="video-vertical-solo"
-          title="Comercial destacado Cinemano">
-        </iframe>
-      </div>
-    </div>
-
-    <div id="video-eventos" class="video-demo" data-video-panel hidden>
-      <h3>Evento destacado</h3>
-      <div class="video-clean-container">
-        <iframe
-          src="https://player.vimeo.com/video/1092911894?h=06bfc38f76&title=0&byline=0&portrait=0&controls=1&badge=0"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-          title="Evento destacado Cinemano"
-          class="video-clean-iframe">
-        </iframe>
-      </div>
-    </div>
-
-    <div id="video-news" class="video-demo" data-video-panel hidden>
-      <h3>Reportaje especial</h3>
-      <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir reportaje especial" onclick="cargarVideoYouTube('youtube-news-container', 'PRt3Tp7Blvc', this)">
-        <img src="thumbnail-news.jpg" alt="Miniatura del reportaje especial" loading="lazy">
-        <div class="play-button">▶</div>
-      </div>
-      <div id="youtube-news-container" class="video-frame" hidden></div>
+      </a>
     </div>
   </section>
 
@@ -175,19 +138,6 @@
       </div>
 
     </div>
-  </section>
-
-  <section id="portafolio" class="section dark">
-    <a href="https://www.behance.net/Cinemano" target="_blank" rel="noopener" class="portafolio-link">
-      <img src="https://cdn-icons-png.flaticon.com/512/145/145799.png" alt="" width="32" height="32">
-      <span>Portafolio</span>
-    </a>
-    <p>Conoce nuestros proyectos audiovisuales realizados para marcas y organizaciones.</p>
-
-    <a href="https://www.behance.net/Cinemano" target="_blank" rel="noopener" class="behance-preview" aria-label="Ver portafolio completo en Behance">
-      <img src="behance-preview.jpg" alt="Vista previa del portafolio en Behance" loading="lazy">
-      <span class="overlay-button">Ver portafolio completo →</span>
-    </a>
   </section>
 
   <section id="contacto" class="section light">

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comercial destacado — Cinemano</title>
+  <meta name="description" content="Comercial producido por Cinemano para cine y TV, con impacto visual y narrativo para elevar marcas.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar nav-hidden" id="navbar">
+  <div class="logo">
+    <a href="index.html"><img src="logo-cinemano.png" alt="Cinemano" class="logo-img" width="140" height="44"></a>
+  </div>
+
+  <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#inicio">Inicio</a></li>
+    <li><a href="index.html#portafolio">Portafolio</a></li>
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="index.html#proceso">Proceso</a></li>
+    <li><a href="index.html#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<header class="project-vertical-hero">
+  <div class="project-vertical-frame">
+    <iframe
+      src="https://player.vimeo.com/video/1092914731?h=07e73fd112&autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0&badge=0"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+      title="Comercial destacado — Cinemano">
+    </iframe>
+  </div>
+</header>
+
+<div class="film-strip" role="presentation"></div>
+
+<main>
+  <section class="section dark project-info">
+    <h1>Comercial destacado</h1>
+    <p>Contenido para cine y TV que eleva tu marca con impacto visual y narrativo, pensado para captar la atención desde el primer segundo.</p>
+    <a href="index.html#portafolio" class="back-link">← Volver al portafolio</a>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Cinemano. Todos los derechos reservados.</p>
+</footer>
+
+<div class="whatsapp-container">
+  <div class="whatsapp-box" id="whatsappBox">
+    <p>Hola 👋<br>¿En qué podemos ayudarte?</p>
+    <a href="https://wa.me/541150245473?text=Hola%2C%20estoy%20interesado%20en%20producir%20un%20video%20para%20mi%20marca.%20%C2%BFPodr%C3%ADas%20contarme%20c%C3%B3mo%20trabajan%20y%20qu%C3%A9%20necesitan%20para%20comenzar%3F"
+       class="btn whatsapp-btn" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  </div>
+  <button class="whatsapp-toggle" id="whatsappToggle" aria-label="Abrir chat de WhatsApp" aria-expanded="false">
+    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="" width="28" height="28">
+  </button>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
