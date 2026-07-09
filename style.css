@@ -338,36 +338,37 @@ button:focus-visible {
   display: block;
   aspect-ratio: 1 / 1;
   background-color: #141414;
-  background-size: cover;
-  background-position: center;
   overflow: hidden;
+  container-type: size;
+}
+
+.portfolio-tile-media {
+  position: absolute;
+  inset: 0;
+}
+
+/* Mismo truco que en el hero, pero relativo al recuadro (container query units)
+   en vez de a la pantalla entera — así el video cubre el recuadro sin deformarse */
+.portfolio-tile-media iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100cqw;
+  height: 56.25cqw;
+  min-width: 177.78cqh;
+  min-height: 100cqh;
+  transform: translate(-50%, -50%) scale(1.02);
+  border: none;
+  pointer-events: none;
 }
 
 .portfolio-tile::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.15) 55%, rgba(0,0,0,0.85) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.1) 55%, rgba(0,0,0,0.8) 100%);
   transition: background 0.3s var(--ease);
-}
-
-.portfolio-tile::after {
-  content: "▶";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.85);
-  width: 64px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--color-gold-bright);
-  border-radius: 50%;
-  color: var(--color-gold-bright);
-  font-size: 1.4em;
-  opacity: 0;
-  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+  z-index: 1;
 }
 
 .portfolio-tile-label {
@@ -380,11 +381,12 @@ button:focus-visible {
   font-weight: 700;
   font-size: clamp(1.1em, 2.4vw, 1.6em);
   text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-  z-index: 1;
+  z-index: 2;
 }
 
-.portfolio-tile:hover::before { background: rgba(0,0,0,0.55); }
-.portfolio-tile:hover::after { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.portfolio-tile:hover::before { background: rgba(0,0,0,0.35); }
+.portfolio-tile:hover .portfolio-tile-media { transform: scale(1.04); }
+.portfolio-tile-media { transition: transform 0.4s var(--ease); }
 
 .behance-cta {
   display: block;
