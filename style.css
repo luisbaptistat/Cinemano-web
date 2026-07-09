@@ -98,7 +98,7 @@ button:focus-visible {
   z-index: 999;
 }
 
-.logo-img { height: 44px; width: auto; }
+.logo-img { height: 58px; width: auto; }
 
 .nav-links {
   list-style: none;
@@ -159,6 +159,10 @@ button:focus-visible {
   }
   .nav-links.active { display: flex; }
   .hamburger { display: block; }
+
+  /* El nav flota fijo sobre el video en desktop, pero en celular el video
+     mide poco de alto y el nav le tapa el título — lo bajamos */
+  .hero-video { margin-top: 78px; }
 }
 
 /* ==========================================================================
