@@ -51,12 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ---------- Nav auto-ocultable ----------
-     Se esconde al bajar la página, aparece al subirla o (en desktop)
-     al acercar el mouse a la franja superior. Funciona igual en
-     PC y en celular. */
+     Arranca escondido: al abrir la página solo se ve el video.
+     Aparece al scrollear hacia arriba o (en desktop) al acercar el
+     mouse a la franja superior; se vuelve a esconder apenas el mouse
+     se aleja de esa zona o se sigue bajando la página. */
   const navbar = document.getElementById('navbar');
-  const SHOW_NEAR_TOP_PX = 72;   // zona sensible al mouse, en px desde arriba
-  const HIDE_AFTER_SCROLL_PX = 120; // no esconder hasta pasar el hero
+  const SHOW_NEAR_TOP_PX = 72; // zona sensible al mouse, en px desde arriba
 
   let lastScrollY = window.scrollY;
   let ticking = false;
@@ -64,18 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function showNav() { navbar.classList.remove('nav-hidden'); }
   function hideNav() { navbar.classList.add('nav-hidden'); }
 
+  hideNav(); // estado inicial: escondido
+
   function handleScroll() {
     const currentY = window.scrollY;
 
-    // Nunca esconder mientras el menú móvil está abierto
     if (navLinks.classList.contains('active')) {
-      showNav();
-    } else if (currentY <= HIDE_AFTER_SCROLL_PX) {
-      showNav(); // siempre visible cerca del tope
-    } else if (currentY > lastScrollY) {
-      hideNav(); // bajando → se esconde
+      showNav(); // nunca esconder con el menú móvil abierto
     } else if (currentY < lastScrollY) {
       showNav(); // subiendo → aparece
+    } else if (currentY > lastScrollY) {
+      hideNav(); // bajando → se esconde
     }
 
     lastScrollY = currentY;
@@ -89,9 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
-  // Desktop: acercar el mouse arriba de todo trae el nav de vuelta
+  // Desktop: acercar el mouse a la franja superior muestra el nav;
+  // alejarlo lo vuelve a esconder (a menos que el menú esté abierto)
   window.addEventListener('mousemove', (e) => {
-    if (e.clientY <= SHOW_NEAR_TOP_PX) showNav();
+    if (navLinks.classList.contains('active')) return;
+    if (e.clientY <= SHOW_NEAR_TOP_PX) {
+      showNav();
+    } else if (e.clientY > SHOW_NEAR_TOP_PX + 48 && window.scrollY <= 4) {
+      hideNav();
+    }
   });
 
 });
