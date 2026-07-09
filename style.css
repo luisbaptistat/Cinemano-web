@@ -161,33 +161,9 @@ button:focus-visible {
   .hamburger { display: block; }
 
   /* El nav flota fijo sobre el video en desktop, pero en celular el video
-     mide poco de alto y el título no entra centrado ahí adentro.
-     Por eso en celular el video queda arriba y el texto pasa a su propio
-     bloque debajo, sin superponerse a nada. */
+     mide poco de alto y el nav le tapa parte de arriba — lo bajamos */
   .hero-video {
     margin-top: 78px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .video-wrapper.ajustado {
-    height: auto;
-    padding-bottom: 0;
-  }
-
-  .hero-frame {
-    position: relative;
-    inset: auto;
-    aspect-ratio: 16 / 9;
-    height: auto;
-  }
-
-  .video-text.centrado {
-    position: static;
-    transform: none;
-    max-width: 100%;
-    padding: 28px 20px 34px;
-    background-color: #000;
   }
 }
 
@@ -235,16 +211,6 @@ button:focus-visible {
   border: none;
 }
 
-/* Overlay oscuro para que el texto siempre se lea sobre el video */
-.hero-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.55) 100%);
-  z-index: 1;
-  pointer-events: none;
-}
-
 /* El iframe ocupa el 100% del recuadro 16:9 — se ve el video completo, sin recortar */
 .hero-frame iframe {
   position: absolute;
@@ -256,27 +222,21 @@ button:focus-visible {
 }
 
 .video-text.centrado {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 2;
-  padding: 12px 20px;
+  padding: 32px 20px 40px;
   width: 100%;
   max-width: 800px;
+  margin: 0 auto;
 }
 
 .video-text.centrado h1 {
   color: var(--color-gold-bright);
-  font-size: clamp(1.3em, 5vw, 3.4em);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+  font-size: clamp(1.5em, 5vw, 3em);
 }
 
 .video-text.centrado p {
-  font-size: clamp(0.8em, 2vw, 1.25em);
-  color: #fff;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+  font-size: clamp(0.9em, 2vw, 1.15em);
+  color: var(--color-text);
 }
 
 /* ==========================================================================
