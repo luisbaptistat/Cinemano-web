@@ -328,15 +328,19 @@ button:focus-visible {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 2px;
   background-color: #000;
+}
+
+@media (min-width: 700px) {
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 .portfolio-tile {
   position: relative;
   display: block;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 9;
   background-color: #141414;
   overflow: hidden;
   container-type: size;
@@ -401,11 +405,6 @@ button:focus-visible {
 }
 
 .behance-cta:hover { background-color: #17161a; }
-
-@media (min-width: 700px) {
-  .portfolio-grid { grid-template-columns: repeat(4, 1fr); }
-  .portfolio-tile { aspect-ratio: 3 / 4; }
-}
 
 /* ==========================================================================
    Proceso
