@@ -13,21 +13,27 @@
 </head>
 <body>
 
-<nav class="navbar nav-hidden" id="navbar">
-  <div class="logo">
-    <a href="index.html"><img src="logo-cinemano.png" alt="Cinemano" class="logo-img" width="140" height="44"></a>
-  </div>
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo-cinemano.png" alt="Cinemano" class="logo-img" width="140" height="44">
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuOverlay">
+    <span class="menu-toggle-bar"></span>
+    <span class="menu-toggle-bar"></span>
+    <span class="menu-toggle-bar"></span>
+  </button>
+</nav>
 
-  <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
-
-  <ul class="nav-links" id="navLinks">
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose" aria-label="Cerrar menú">✕</button>
+  <ul class="menu-overlay-links">
     <li><a href="index.html#inicio">Inicio</a></li>
     <li><a href="index.html#portafolio">Portafolio</a></li>
     <li><a href="index.html#servicios">Servicios</a></li>
     <li><a href="index.html#proceso">Proceso</a></li>
     <li><a href="index.html#contacto">Contacto</a></li>
   </ul>
-</nav>
+</div>
 
 <header class="hero-video">
   <div class="video-wrapper ajustado">

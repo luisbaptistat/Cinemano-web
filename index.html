@@ -13,21 +13,27 @@
 </head>
 <body>
 
-<nav class="navbar nav-hidden" id="navbar">
-  <div class="logo">
+<nav class="navbar" id="navbar">
+  <a href="#inicio" class="logo">
     <img src="logo-cinemano.png" alt="Cinemano" class="logo-img" width="140" height="44">
-  </div>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuOverlay">
+    <span class="menu-toggle-bar"></span>
+    <span class="menu-toggle-bar"></span>
+    <span class="menu-toggle-bar"></span>
+  </button>
+</nav>
 
-  <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
-
-  <ul class="nav-links" id="navLinks">
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose" aria-label="Cerrar menú">✕</button>
+  <ul class="menu-overlay-links">
     <li><a href="#inicio">Inicio</a></li>
     <li><a href="#portafolio">Portafolio</a></li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#proceso">Proceso</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
-</nav>
+</div>
 
 <header id="inicio" class="hero-video">
   <div class="video-wrapper ajustado">
