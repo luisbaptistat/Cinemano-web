@@ -159,12 +159,6 @@ button:focus-visible {
   }
   .nav-links.active { display: flex; }
   .hamburger { display: block; }
-
-  /* El nav flota fijo sobre el video en desktop, pero en celular el video
-     mide poco de alto y el nav le tapa parte de arriba — lo bajamos */
-  .hero-video {
-    margin-top: 78px;
-  }
 }
 
 /* ==========================================================================
@@ -186,7 +180,7 @@ button:focus-visible {
 .hero-video {
   position: relative;
   width: 100%;
-  margin: 0;
+  margin: 78px 0 0; /* el nav es fijo y flota arriba de todo — el video empieza debajo, sin superponerse */
   padding: 0;
   background-color: #000;
 }
