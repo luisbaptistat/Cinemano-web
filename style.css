@@ -224,9 +224,11 @@ button:focus-visible {
 }
 
 /* En celular el logo y el botón de menú flotan fijos arriba de todo;
-   como ahí el video mide poco de alto, lo bajamos para que no se pisen */
+   como ahí el video mide poco de alto, lo bajamos para que no se pisen.
+   Usamos padding (no margin) para que ese espacio quede DENTRO de la caja
+   con fondo negro sólido del hero, y se vea igual en cualquier celular. */
 @media (max-width: 700px) {
-  .hero-video { margin-top: 88px; }
+  .hero-video { padding-top: 88px; }
 }
 
 /* Truco clásico y muy compatible: el padding-bottom en % fija la proporción 16:9
