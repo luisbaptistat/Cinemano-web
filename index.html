@@ -170,27 +170,108 @@
     </div>
   </section>
 
-  <section id="contacto" class="section light">
+  <section id="contacto" class="section light contact-section">
     <h2>Contacto</h2>
 
-    <div class="social-icons">
-      <a href="mailto:contacto@cinemano.com" aria-label="Escribir un email">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="" width="30" height="30">
-      </a>
-      <a href="https://www.instagram.com/cinemano_/" target="_blank" rel="noopener" aria-label="Instagram">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="" width="30" height="30">
-      </a>
-      <a href="https://www.tiktok.com/@cinemano_" target="_blank" rel="noopener" aria-label="TikTok">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="" width="30" height="30">
-      </a>
-      <a href="https://www.youtube.com/@cinemano_" target="_blank" rel="noopener" aria-label="YouTube">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="" width="30" height="30">
-      </a>
-    </div>
+    <div class="contact-grid">
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="Nombre" required>
+          </div>
+          <div class="form-field">
+            <label for="apellido">Apellido *</label>
+            <input type="text" id="apellido" name="Apellido" required>
+          </div>
+        </div>
 
-    <a href="https://wa.me/message/TCBKXBPGJQQAM1" class="btn whatsapp" target="_blank" rel="noopener">
-      Escribir por WhatsApp
-    </a>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="Email" required>
+          </div>
+          <div class="form-field">
+            <label for="telefono">Teléfono *</label>
+            <input type="tel" id="telefono" name="Teléfono" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="pais">País *</label>
+            <select id="pais" name="País" required>
+              <option value="" disabled selected>Seleccioná tu país</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="proyecto">Tipo de proyecto *</label>
+            <select id="proyecto" name="Tipo de proyecto" required>
+              <option value="" disabled selected>Seleccioná una opción</option>
+              <option value="Documental">Documental</option>
+              <option value="Comercial">Comercial</option>
+              <option value="Evento">Evento</option>
+              <option value="News Feature">News Feature</option>
+              <option value="Color Grading">Color Grading</option>
+              <option value="AI">AI</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="mensaje">Mensaje *</label>
+          <textarea id="mensaje" name="Mensaje" rows="4" required></textarea>
+        </div>
+
+        <p class="form-note">* Campos obligatorios</p>
+
+        <button type="submit" class="btn-submit" id="submitBtn">Enviar</button>
+        <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-info">
+        <p class="contact-info-intro">
+          Si tenés alguna pregunta o consulta puntual sobre Cinemano, podés escribirnos directo —
+          trabajamos con clientes en Venezuela y Argentina.
+        </p>
+
+        <div class="contact-info-block">
+          <h3>WhatsApp</h3>
+          <a href="https://wa.me/541150245473" target="_blank" rel="noopener">+54 11 5024-5473</a>
+        </div>
+
+        <div class="contact-info-block">
+          <h3>Email</h3>
+          <a href="mailto:contacto@cinemano.com">contacto@cinemano.com</a>
+        </div>
+
+        <div class="contact-info-block">
+          <h3>Redes</h3>
+          <div class="social-icons">
+            <a href="mailto:contacto@cinemano.com" aria-label="Escribir un email">
+              <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="" width="26" height="26">
+            </a>
+            <a href="https://www.instagram.com/cinemano_/" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="" width="26" height="26">
+            </a>
+            <a href="https://www.tiktok.com/@cinemano_" target="_blank" rel="noopener" aria-label="TikTok">
+              <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="" width="26" height="26">
+            </a>
+            <a href="https://www.youtube.com/@cinemano_" target="_blank" rel="noopener" aria-label="YouTube">
+              <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="" width="26" height="26">
+            </a>
+          </div>
+        </div>
+
+        <a href="https://wa.me/message/TCBKXBPGJQQAM1" class="btn whatsapp" target="_blank" rel="noopener">
+          Escribir por WhatsApp
+        </a>
+      </div>
+    </div>
   </section>
 
 </main>

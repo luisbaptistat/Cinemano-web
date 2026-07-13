@@ -39,4 +39,41 @@ document.addEventListener('DOMContentLoaded', () => {
     whatsappToggle.setAttribute('aria-expanded', String(isOpen));
   });
 
+  /* ---------- Formulario de contacto ---------- */
+  const contactForm = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const formFeedback = document.getElementById('formFeedback');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+      formFeedback.textContent = '';
+      formFeedback.className = 'form-feedback';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (response.ok) {
+          formFeedback.textContent = '¡Gracias! Recibimos tu mensaje, te vamos a contactar a la brevedad.';
+          formFeedback.classList.add('success');
+          contactForm.reset();
+        } else {
+          throw new Error('Respuesta no exitosa');
+        }
+      } catch (err) {
+        formFeedback.textContent = 'No pudimos enviar el formulario. Escribinos directo por WhatsApp o email.';
+        formFeedback.classList.add('error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar';
+      }
+    });
+  }
+
 });
