@@ -1,4 +1,19 @@
 /* ==========================================================================
+   Tipografía de marca — Hemi Head Bold Italic (la del logo de Cinemano)
+   ========================================================================== */
+@font-face {
+  font-family: "Hemi Head Bold Italic";
+  src: url("https://db.onlinewebfonts.com/t/8146e2bb3bfc319cebdc2b328cea0a6f.eot");
+  src: url("https://db.onlinewebfonts.com/t/8146e2bb3bfc319cebdc2b328cea0a6f.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/8146e2bb3bfc319cebdc2b328cea0a6f.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/8146e2bb3bfc319cebdc2b328cea0a6f.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/8146e2bb3bfc319cebdc2b328cea0a6f.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
    CINEMANO — Design tokens
    ========================================================================== */
 :root {
@@ -12,7 +27,7 @@
   --color-gold-bright: #ffd700;
   --color-gold-deep: #8a6a1c;
 
-  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-display: 'Hemi Head Bold Italic', 'Arial Narrow', sans-serif;
   --font-body: 'Poppins', sans-serif;
 
   --radius-lg: 20px;
@@ -59,7 +74,8 @@ a { color: inherit; }
 h1, h2, h3 {
   font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   margin: 0 0 16px;
 }
 
