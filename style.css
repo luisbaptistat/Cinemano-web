@@ -390,10 +390,6 @@ button:focus-visible {
 }
 
 @media (min-width: 700px) {
-  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 1100px) {
   .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
@@ -451,6 +447,28 @@ button:focus-visible {
 .portfolio-tile:hover::before { background: rgba(0,0,0,0.35); }
 .portfolio-tile:hover .portfolio-tile-media { transform: scale(1.04); }
 .portfolio-tile-media { transition: transform 0.4s var(--ease); }
+
+/* Tarjetas todavía sin video cargado */
+.portfolio-tile-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1d 0%, #0e0e10 100%);
+}
+
+.portfolio-tile-soon {
+  color: var(--color-text-dim);
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  padding: 6px 16px;
+}
+
+.portfolio-tile-pending:hover .portfolio-tile-media { transform: none; }
 
 .behance-cta {
   display: block;
@@ -531,6 +549,25 @@ button:focus-visible {
 
 .project-info h1 { color: var(--color-gold-bright); }
 .project-info p { max-width: 640px; margin-left: auto; margin-right: auto; }
+
+.project-pending-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1d 0%, #0e0e10 100%);
+}
+
+.project-pending-text {
+  color: var(--color-text-dim);
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 30px;
+  padding: 10px 28px;
+  margin: 0;
+}
 
 .back-link {
   display: inline-block;
