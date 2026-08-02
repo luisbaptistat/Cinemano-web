@@ -277,6 +277,12 @@ button:focus-visible {
   pointer-events: none;
 }
 
+/* En las páginas de cada proyecto (no en el home) sí dejamos interactuar
+   con el video, para que el botón nativo de silenciar/activar sonido funcione */
+.hero-video--project .hero-frame iframe {
+  pointer-events: auto;
+}
+
 .video-text.centrado {
   text-align: center;
   padding: 32px 20px 40px;
