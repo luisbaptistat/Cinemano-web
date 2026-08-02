@@ -335,52 +335,6 @@ button:focus-visible {
 @media (min-width: 1200px) { .section { padding: 90px 90px; } }
 
 /* ==========================================================================
-   Servicios — cards
-   ========================================================================== */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.card {
-  background-color: var(--color-bg-alt);
-  border: 1px solid rgba(212, 175, 55, 0.15);
-  padding: 26px 22px;
-  border-radius: var(--radius-md);
-  width: 250px;
-  color: var(--color-text);
-  font-family: inherit;
-  text-align: left;
-  text-decoration: none;
-  display: block;
-  cursor: pointer;
-  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
-}
-
-.card h3 {
-  font-size: 1.15em;
-  color: var(--color-gold-bright);
-  margin-bottom: 8px;
-}
-
-.card p { color: var(--color-text-dim); font-size: 0.95em; margin: 0; }
-
-.card:hover,
-.card:focus-visible {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 28px rgba(212, 175, 55, 0.18);
-  border-color: rgba(212, 175, 55, 0.4);
-}
-
-.card[aria-pressed="true"] {
-  border-color: var(--color-gold-bright);
-  background-color: #1d1b17;
-}
-
-/* ==========================================================================
    Portafolio — grid de videos a pantalla completa (estilo WimmerFilms)
    ========================================================================== */
 .portfolio-grid-section {
