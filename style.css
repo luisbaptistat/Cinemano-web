@@ -56,17 +56,6 @@ body {
   position: relative;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: url('foto-cinemano.jpg') no-repeat center center fixed;
-  background-size: cover;
-  opacity: 0.35;
-  z-index: -1;
-  pointer-events: none;
-}
-
 img { max-width: 100%; display: block; }
 
 a { color: inherit; }
