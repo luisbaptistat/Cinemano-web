@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinemano — Realizadores Audiovisuales</title>
+  <meta name="description" content="Cinemano es una productora venezolana especializada en documentales, comerciales, eventos y piezas periodísticas con mirada cinematográfica.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="#inicio" class="logo">
+    <img src="logo-cinemano.png" alt="Cinemano" class="logo-img" width="140" height="44">
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuOverlay">
+    <span class="menu-toggle-bar"></span>
+    <span class="menu-toggle-bar"></span>
+    <span class="menu-toggle-bar"></span>
+  </button>
+</nav>
+
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose" aria-label="Cerrar menú">✕</button>
+  <ul class="menu-overlay-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#portafolio">Portafolio</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</div>
+
+<header id="inicio" class="hero-video">
+  <div class="video-wrapper ajustado">
+    <div class="hero-frame">
+      <iframe
+        src="https://www.youtube.com/embed/uqGoqO1jnMs?autoplay=1&mute=1&loop=1&playlist=uqGoqO1jnMs&controls=0&modestbranding=1&rel=0&playsinline=1&showinfo=0&iv_load_policy=3&cc_load_policy=0&cc_lang_pref=none&disablekb=1&fs=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        title="Video de presentación Cinemano">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="video-text centrado">
+    <h1>Tu visión, hecha cine.</h1>
+    <p>Transformamos ideas en piezas visuales memorables que conectan, emocionan y perduran.</p>
+  </div>
+</header>
+
+<div class="film-strip" role="presentation"></div>
+
+<main>
+
+  <section id="portafolio" class="portfolio-grid-section">
+    <div class="portfolio-grid">
+      <a href="edicion.html" class="portfolio-tile" aria-label="Ver proyecto: Edición">
+        <div class="portfolio-tile-media">
+          <iframe src="https://www.youtube.com/embed/uqGoqO1jnMs?autoplay=1&mute=1&loop=1&playlist=uqGoqO1jnMs&controls=0&modestbranding=1&rel=0&playsinline=1&disablekb=1&fs=0&cc_load_policy=0" frameborder="0" allow="autoplay" title="Edición"></iframe>
+        </div>
+        <span class="portfolio-tile-label">Edición</span>
+      </a>
+      <a href="color-grading.html" class="portfolio-tile" aria-label="Ver proyecto: Color Grading">
+        <div class="portfolio-tile-media">
+          <iframe src="https://player.vimeo.com/video/714226206?h=6beb18f9a0&autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay" title="Color Grading"></iframe>
+        </div>
+        <span class="portfolio-tile-label">Color Grading</span>
+      </a>
+      <a href="ai.html" class="portfolio-tile" aria-label="Ver proyecto: Inteligencia Artificial">
+        <div class="portfolio-tile-media">
+          <iframe src="https://player.vimeo.com/video/1213466315?h=ea404816ae&autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay" title="Inteligencia Artificial"></iframe>
+        </div>
+        <span class="portfolio-tile-label">Inteligencia Artificial</span>
+      </a>
+      <a href="corporativo.html" class="portfolio-tile" aria-label="Ver proyecto: Corporativo">
+        <div class="portfolio-tile-media">
+          <iframe src="https://player.vimeo.com/video/1213469657?h=19a5550df5&autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay" title="Corporativo"></iframe>
+        </div>
+        <span class="portfolio-tile-label">Corporativo</span>
+      </a>
+      <a href="comercial.html" class="portfolio-tile" aria-label="Ver proyecto: Comercial">
+        <div class="portfolio-tile-media">
+          <iframe src="https://player.vimeo.com/video/1109855068?h=718dc42dd0&autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay" title="Comercial"></iframe>
+        </div>
+        <span class="portfolio-tile-label">Comercial</span>
+      </a>
+      <a href="redes-sociales.html" class="portfolio-tile" aria-label="Ver proyecto: Redes Sociales">
+        <div class="portfolio-tile-media">
+          <iframe src="https://player.vimeo.com/video/1213466348?h=b872a2960d&autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay" title="Redes Sociales"></iframe>
+        </div>
+        <span class="portfolio-tile-label">Redes Sociales</span>
+      </a>
+      <a href="documental.html" class="portfolio-tile" aria-label="Ver proyecto: Documental">
+        <div class="portfolio-tile-media">
+          <iframe src="https://player.vimeo.com/video/1215005969?h=c86aadf23c&autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay" title="Documental"></iframe>
+        </div>
+        <span class="portfolio-tile-label">Documental</span>
+      </a>
+      <a href="videoclip.html" class="portfolio-tile" aria-label="Ver proyecto: VideoClip">
+        <div class="portfolio-tile-media">
+          <iframe src="https://player.vimeo.com/video/1215003539?h=9bdbda717d&autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay" title="VideoClip"></iframe>
+        </div>
+        <span class="portfolio-tile-label">VideoClip</span>
+      </a>
+      <a href="evento.html" class="portfolio-tile" aria-label="Ver proyecto: Evento">
+        <div class="portfolio-tile-media">
+          <iframe src="https://player.vimeo.com/video/775575507?h=bcf665f59f&autoplay=1&muted=1&loop=1&background=1" frameborder="0" allow="autoplay" title="Evento"></iframe>
+        </div>
+        <span class="portfolio-tile-label">Evento</span>
+      </a>
+    </div>
+    <a href="https://www.behance.net/Cinemano" target="_blank" rel="noopener" class="behance-cta">
+      Ver portafolio completo en Behance →
+    </a>
+  </section>
+
+  <section id="proceso" class="section dark">
+    <h2>Nuestro proceso</h2>
+
+    <div class="process-timeline">
+      <div class="process-track" role="presentation"></div>
+
+      <div class="process-step">
+        <div class="process-badge">
+          <span class="process-number">1</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z" />
+          </svg>
+        </div>
+        <h3>Guión y Concepto</h3>
+        <p>Definimos la idea, la narrativa y el mensaje que va a sostener toda la pieza.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-badge">
+          <span class="process-number">2</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 11l3 3L22 4" />
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+          </svg>
+        </div>
+        <h3>Preproducción</h3>
+        <p>Planificamos locaciones, casting y cada detalle técnico antes de rodar.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-badge">
+          <span class="process-number">3</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 8 16 12 22 16V8Z" />
+            <rect x="2" y="6" width="14" height="12" rx="2" ry="2" />
+          </svg>
+        </div>
+        <h3>Producción</h3>
+        <p>Filmamos con ojo de cine y ritmo de hoy: dirección de fotografía e iluminación profesional para comerciales, redes y contenido digital.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-badge">
+          <span class="process-number">4</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="6" cy="6" r="3" />
+            <circle cx="6" cy="18" r="3" />
+            <line x1="20" y1="4" x2="8.12" y2="15.88" />
+            <line x1="14.47" y1="14.48" x2="20" y2="20" />
+          </svg>
+        </div>
+        <h3>Postproducción</h3>
+        <p>Editamos, corregimos color y sumamos diseño de sonido.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-badge">
+          <span class="process-number">5</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 2 11 13" />
+            <path d="M22 2 15 22l-4-9-9-4 20-7Z" />
+          </svg>
+        </div>
+        <h3>Entrega</h3>
+        <p>Exportamos en los formatos que necesites, listos para cada plataforma.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section light contact-section">
+    <h2>Contacto</h2>
+
+    <div class="contact-grid">
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdaqoozb" method="POST">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="Nombre" required>
+          </div>
+          <div class="form-field">
+            <label for="apellido">Apellido *</label>
+            <input type="text" id="apellido" name="Apellido" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="Email" required>
+          </div>
+          <div class="form-field">
+            <label for="telefono">Teléfono *</label>
+            <input type="tel" id="telefono" name="Teléfono" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="pais">País *</label>
+            <select id="pais" name="País" required>
+              <option value="" disabled selected>Seleccioná tu país</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="proyecto">Tipo de proyecto *</label>
+            <select id="proyecto" name="Tipo de proyecto" required>
+              <option value="" disabled selected>Seleccioná una opción</option>
+              <option value="Documental">Documental</option>
+              <option value="Comercial">Comercial</option>
+              <option value="Evento">Evento</option>
+              <option value="News Feature">News Feature</option>
+              <option value="Color Grading">Color Grading</option>
+              <option value="AI">AI</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="mensaje">Mensaje *</label>
+          <textarea id="mensaje" name="Mensaje" rows="4" required></textarea>
+        </div>
+
+        <p class="form-note">* Campos obligatorios</p>
+
+        <button type="submit" class="btn-submit" id="submitBtn">Enviar</button>
+        <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-info">
+        <p class="contact-info-intro">
+          Si tenés alguna pregunta o consulta puntual sobre Cinemano, podés escribirnos directo —
+          trabajamos con clientes en Venezuela y Argentina.
+        </p>
+
+        <div class="contact-info-block">
+          <h3>WhatsApp</h3>
+          <a href="https://wa.me/541150245473" target="_blank" rel="noopener">+54 11 5024-5473</a>
+        </div>
+
+        <div class="contact-info-block">
+          <h3>Email</h3>
+          <a href="mailto:contacto@cinemano.com">contacto@cinemano.com</a>
+        </div>
+
+        <div class="contact-info-block">
+          <h3>Redes</h3>
+          <div class="social-icons">
+            <a href="mailto:contacto@cinemano.com" aria-label="Escribir un email">
+              <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="" width="26" height="26">
+            </a>
+            <a href="https://www.instagram.com/cinemano_/" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="" width="26" height="26">
+            </a>
+            <a href="https://www.tiktok.com/@cinemano_" target="_blank" rel="noopener" aria-label="TikTok">
+              <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="" width="26" height="26">
+            </a>
+            <a href="https://www.youtube.com/@cinemano_" target="_blank" rel="noopener" aria-label="YouTube">
+              <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="" width="26" height="26">
+            </a>
+          </div>
+        </div>
+
+        <a href="https://wa.me/message/TCBKXBPGJQQAM1" class="btn whatsapp" target="_blank" rel="noopener">
+          Escribir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Cinemano. Todos los derechos reservados.</p>
+</footer>
+
+<div class="whatsapp-container">
+  <div class="whatsapp-box" id="whatsappBox">
+    <p>Hola 👋<br>¿En qué podemos ayudarte?</p>
+    <a href="https://wa.me/541150245473?text=Hola%2C%20estoy%20interesado%20en%20producir%20un%20video%20para%20mi%20marca.%20%C2%BFPodr%C3%ADas%20contarme%20c%C3%B3mo%20trabajan%20y%20qu%C3%A9%20necesitan%20para%20comenzar%3F"
+       class="btn whatsapp-btn" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  </div>
+  <button class="whatsapp-toggle" id="whatsappToggle" aria-label="Abrir chat de WhatsApp" aria-expanded="false">
+    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="" width="28" height="28">
+  </button>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
