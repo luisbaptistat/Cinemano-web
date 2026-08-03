@@ -619,42 +619,46 @@ button:focus-visible {
 .form-field label {
   font-weight: 600;
   font-size: 0.85em;
-  color: var(--color-ink);
+  color: var(--color-text-dim);
 }
 
 .form-field input,
 .form-field select,
 .form-field textarea {
   padding: 11px 12px;
-  border: 1px solid rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 8px;
   font-family: inherit;
   font-size: 0.95em;
-  background-color: #fff;
-  color: var(--color-ink);
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
   transition: border-color 0.3s var(--ease);
 }
+
+.form-field select option { background-color: var(--color-bg-alt); color: var(--color-text); }
+
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: var(--color-text-dim); }
 
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: var(--color-gold-deep);
+  border-color: var(--color-gold-bright);
 }
 
 .form-field textarea { resize: vertical; }
 
 .form-note {
   font-size: 0.8em;
-  color: var(--color-ink);
-  opacity: 0.6;
+  color: var(--color-text-dim);
   margin: 0;
 }
 
 .btn-submit {
   align-self: flex-start;
-  background-color: #141414;
-  color: var(--color-gold-bright);
+  background-color: var(--color-gold-bright);
+  color: #141414;
   border: none;
   padding: 13px 34px;
   border-radius: 30px;
@@ -665,7 +669,7 @@ button:focus-visible {
   transition: background-color 0.3s var(--ease), transform 0.2s var(--ease);
 }
 
-.btn-submit:hover { background-color: #000; transform: translateY(-2px); }
+.btn-submit:hover { background-color: #fff; transform: translateY(-2px); }
 .btn-submit:disabled { opacity: 0.6; cursor: default; transform: none; }
 
 .form-feedback {
@@ -674,32 +678,31 @@ button:focus-visible {
   min-height: 1.2em;
 }
 
-.form-feedback.success { color: #1e7d34; }
-.form-feedback.error { color: #b3261e; }
+.form-feedback.success { color: #4fd07a; }
+.form-feedback.error { color: #ff6b6b; }
 
 .contact-info { display: flex; flex-direction: column; gap: 26px; }
 
 .contact-info-intro {
-  color: var(--color-ink);
-  opacity: 0.85;
+  color: var(--color-text-dim);
   margin: 0;
 }
 
 .contact-info-block h3 {
-  color: var(--color-gold-deep);
+  color: var(--color-gold-bright);
   font-size: 1em;
   margin: 0 0 6px;
 }
 
 .contact-info-block a {
-  color: var(--color-ink);
+  color: var(--color-text);
   text-decoration: none;
   font-weight: 600;
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s var(--ease);
 }
 
-.contact-info-block a:hover { border-color: var(--color-gold-deep); }
+.contact-info-block a:hover { border-color: var(--color-gold-bright); }
 
 .contact-section .social-icons { justify-content: flex-start; margin: 0; }
 
@@ -762,13 +765,17 @@ footer {
   border-radius: 50%;
   width: 58px;
   height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s var(--ease);
 }
 
 .whatsapp-toggle:hover { transform: scale(1.06); }
-.whatsapp-toggle img { width: 28px; height: 28px; }
+.whatsapp-toggle img { width: 28px; height: 28px; display: block; }
 
 .whatsapp-box {
   display: none;
